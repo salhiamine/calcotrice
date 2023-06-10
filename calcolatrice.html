@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<title>Calcolatrice</title>
+
+
+<style>
+    .numero  {
+
+
+    border-radius: 4px;
+    border-style: solid;
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(0, 0, 0);
+    margin-bottom: 10px;
+    border-width: 1px;
+    border: none;
+    box-shadow: 0px 0px 3px black;
+
+
+    }
+
+    .container {
+        width: 330px;
+        background-color: #f80000;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px black;
+
+    }
+
+    .numero2     {
+
+        border-radius: 4px;
+        border-style: solid;
+        background-color: rgb(255, 255, 255);
+        border-color: rgb(0, 0, 0);
+        margin-bottom: 10px;
+        border-width: 1px;
+        border: none;
+        box-shadow: 0px 0px 3px black;
+
+    }
+
+    .aumento    {
+        margin-left: 10px;
+        background-color: rgb(0, 0, 0);
+        color: rgb(255, 255, 255);
+        border-radius: 4px;  
+        cursor: pointer;
+        border-color: rgb(238, 0, 0);
+        border-style: solid;
+        border-width: 1px;
+        border: none;
+        box-shadow: 0px 0px 3px rgb(255, 183, 0);
+    } 
+
+    .aumento:hover {
+        opacity: 0.8;
+    }
+    .aumento:active{
+         opacity: 0.5;
+    }
+
+    .risultato  {
+    
+        display: block;
+        border-radius: 4px;
+        border-style: solid;
+        border-color: black;
+        border-width: 1px;
+        border: none;
+        box-shadow: 0px 0px 3px black;
+
+    }
+
+    .Scritta {
+
+
+    font-family: Arial;
+    font-size: 8px;
+    font-weight: bolder ;
+    margin-bottom: 44px;
+    float: right 10px;
+    color: white;
+        
+    }
+
+</style>
+    </head>
+
+    <body>
+        <div class="container">
+            <input class="numero" id = "numero1" type="text" placeholder="Number">
+            <input class="numero2" id ="numero2" type="text" placeholder=" number">
+            <button class="aumento" onclick="calcola()">+</button>
+            <input class="risultato" id="risultato" type="text" placeholder="Total">
+            <p class="Scritta"> By  Salhi Amine</p>
+</div>
+    <script>
+        function calcola() {
+            var num1 = parseFloat(document.getElementById('numero1').value);
+            var num2 = parseFloat(document.getElementById('numero2').value);
+            var risultato = num1 + num2;
+            document.getElementById('risultato').value = risultato;
+        }
+    </script>
+    </body>
+</html>
